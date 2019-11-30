@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0028)https://lupantech.github.io/ -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="generator" content="AsciiDoc 8.6.9">
+<title>Pan Lu</title>
+<style type="text/css">
+/* Shared CSS for AsciiDoc xhtml11 and html5 backends */
+
+/* Default font. */
+body {
+  font-family: Georgia,serif;
+  text-align:left;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Title font. */
+h1, h2, h3, h4, h5, h6,
+div.title, caption.title,
+thead, p.table.header,
+#toctitle,
+#author, #revnumber, #revdate, #revremark,
+#footer {
+  font-family: serif;
+}
+
+a {
+  color: blue;
+  text-decoration: underline;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #527bbd;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  line-height: 1.3;
+}
+
+h1, h2, h3 {
+  border-bottom: 2px solid silver;
+}
+h2 {
+  padding-top: 0.5em;
+}
+h3 {
+  float: left;
+}
+h3 + * {
+  clear: left;
+}
+h5 {
+  font-size: 1.0em;
+}
+
+div.sectionbody {
+  margin-left: 0;
+}
+
+hr {
+  border: 1px solid silver;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+img {
+  margin-top: -2em;
+  padding-left: 1em;
+}
+
+ul, ol, li > p {
+  margin-top: 0;
+}
+ul > li     { color: #aaa; }
+ul > li > * { color: black; }
+
+.monospaced, code, pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: inherit;
+  color: navy;
+  padding: 0;
+  margin: 0;
+}
+pre {
+  white-space: pre-wrap;
+}
+
+#author {
+  color: #527bbd;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+#email {
+}
+#revnumber, #revdate, #revremark {
+}
+
+#footer {
+  font-size: small;
+  border-top: 2px solid silver;
+  padding-top: 0.5em;
+  margin-top: 4.0em;
+}
+#footer-text {
+  float: left;
+  padding-bottom: 0.5em;
+}
+#footer-badges {
+  float: right;
+  padding-bottom: 0.5em;
+}
+
+#preamble {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+div.imageblock, div.exampleblock, div.verseblock,
+div.quoteblock, div.literalblock, div.listingblock, div.sidebarblock,
+div.admonitionblock {
+  margin-top: 1.0em;
+  margin-bottom: 1.5em;
+}
+div.admonitionblock {
+  margin-top: 2.0em;
+  margin-bottom: 2.0em;
+  margin-right: 10%;
+  color: #606060;
+}
+
+div.content { /* Block element content. */
+  padding: 0;
+}
+
+/* Block element titles. */
+div.title, caption.title {
+  color: #527bbd;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 1.0em;
+  margin-bottom: 0.5em;
+}
+div.title + * {
+  margin-top: 0;
+}
+
+@media print {
+  body.manpage div#toc { display: none; }
+}
+
+
+</style>
+<script type="text/javascript" async="" src="./files/ga(1).js"></script><script type="text/javascript" async="" src="./files/ga(2).js"></script><script type="text/javascript">
+/*<![CDATA[*/
+var asciidoc = {  // Namespace.
+/////////////////////////////////////////////////////////////////////
+// Table Of Contents generator
+/////////////////////////////////////////////////////////////////////
+
+/* Author: Mihai Bazon, September 2002
+ * http://students.infoiasi.ro/~mishoo
+ *
+ * Table Of Content generator
+ * Version: 0.4
+ *
+ * Feel free to use this script under the terms of the GNU General Public
+ * License, as long as you do not remove or alter this notice.
+ */
+
+ /* modified by Troy D. Hanson, September 2006. License: GPL */
+ /* modified by Stuart Rackham, 2006, 2009. License: GPL */
+
+// toclevels = 1..4.
+toc: function (toclevels) {
+
+  function getText(el) {
+    var text = "";
+    for (var i = el.firstChild; i != null; i = i.nextSibling) {
+      if (i.nodeType == 3 /* Node.TEXT_NODE */) // IE doesn't speak constants.
+        text += i.data;
+      else if (i.firstChild != null)
+        text += getText(i);
+    }
+    return text;
+  }
+
+  function TocEntry(el, text, toclevel) {
+    this.element = el;
+    this.text = text;
+    this.toclevel = toclevel;
+  }
+
+  function tocEntries(el, toclevels) {
+    var result = new Array;
+    var re = new RegExp('[hH]([1-'+(toclevels+1)+'])');
+    // Function that scans the DOM tree for header elements (the DOM2
+    // nodeIterator API would be a better technique but not supported by all
+    // browsers).
+    var iterate = function (el) {
+      for (var i = el.firstChild; i != null; i = i.nextSibling) {
+        if (i.nodeType == 1 /* Node.ELEMENT_NODE */) {
+          var mo = re.exec(i.tagName);
+          if (mo && (i.getAttribute("class") || i.getAttribute("className")) != "float") {
+            result[result.length] = new TocEntry(i, getText(i), mo[1]-1);
+          }
+          iterate(i);
+        }
+      }
+    }
+    iterate(el);
+    return result;
+  }
+
+  var toc = document.getElementById("toc");
+  if (!toc) {
+    return;
+  }
+
+  // Delete existing TOC entries in case we're reloading the TOC.
+  var tocEntriesToRemove = [];
+  var i;
+  for (i = 0; i < toc.childNodes.length; i++) {
+    var entry = toc.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div'
+     && entry.getAttribute("class")
+     && entry.getAttribute("class").match(/^toclevel/))
+      tocEntriesToRemove.push(entry);
+  }
+  for (i = 0; i < tocEntriesToRemove.length; i++) {
+    toc.removeChild(tocEntriesToRemove[i]);
+  }
+
+  // Rebuild TOC entries.
+  var entries = tocEntries(document.getElementById("content"), toclevels);
+  for (var i = 0; i < entries.length; ++i) {
+    var entry = entries[i];
+    if (entry.element.id == "")
+      entry.element.id = "_toc_" + i;
+    var a = document.createElement("a");
+    a.href = "#" + entry.element.id;
+    a.appendChild(document.createTextNode(entry.text));
+    var div = document.createElement("div");
+    div.appendChild(a);
+    div.className = "toclevel" + entry.toclevel;
+    toc.appendChild(div);
+  }
+  if (entries.length == 0)
+    toc.parentNode.removeChild(toc);
+},
+
+
+/////////////////////////////////////////////////////////////////////
+// Footnotes generator
+/////////////////////////////////////////////////////////////////////
+
+/* Based on footnote generation code from:
+ * http://www.brandspankingnew.net/archive/2005/07/format_footnote.html
+ */
+
+footnotes: function () {
+  // Delete existing footnote entries in case we're reloading the footnodes.
+  var i;
+  var noteholder = document.getElementById("footnotes");
+  if (!noteholder) {
+    return;
+  }
+  var entriesToRemove = [];
+  for (i = 0; i < noteholder.childNodes.length; i++) {
+    var entry = noteholder.childNodes[i];
+    if (entry.nodeName.toLowerCase() == 'div' && entry.getAttribute("class") == "footnote")
+      entriesToRemove.push(entry);
+  }
+  for (i = 0; i < entriesToRemove.length; i++) {
+    noteholder.removeChild(entriesToRemove[i]);
+  }
+
+  // Rebuild footnote entries.
+  var cont = document.getElementById("content");
+  var spans = cont.getElementsByTagName("span");
+  var refs = {};
+  var n = 0;
+  for (i=0; i<spans.length; i++) {
+    if (spans[i].className == "footnote") {
+      n++;
+      var note = spans[i].getAttribute("data-note");
+      if (!note) {
+        // Use [\s\S] in place of . so multi-line matches work.
+        // Because JavaScript has no s (dotall) regex flag.
+        note = spans[i].innerHTML.match(/\s*\[([\s\S]*)]\s*/)[1];
+        spans[i].innerHTML =
+          "[<a id='_footnoteref_" + n + "' href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+        spans[i].setAttribute("data-note", note);
+      }
+      noteholder.innerHTML +=
+        "<div class='footnote' id='_footnote_" + n + "'>" +
+        "<a href='#_footnoteref_" + n + "' title='Return to text'>" +
+        n + "</a>. " + note + "</div>";
+      var id =spans[i].getAttribute("id");
+      if (id != null) refs["#"+id] = n;
+    }
+  }
+  if (n == 0)
+    noteholder.parentNode.removeChild(noteholder);
+  else {
+    // Process footnoterefs.
+    for (i=0; i<spans.length; i++) {
+      if (spans[i].className == "footnoteref") {
+        var href = spans[i].getElementsByTagName("a")[0].getAttribute("href");
+        href = href.match(/#.*/)[0];  // Because IE return full URL.
+        n = refs[href];
+        spans[i].innerHTML =
+          "[<a href='#_footnote_" + n +
+          "' title='View footnote' class='footnote'>" + n + "</a>]";
+      }
+    }
+  }
+},
+
+install: function(toclevels) {
+  var timerId;
+
+  function reinstall() {
+    asciidoc.footnotes();
+    if (toclevels) {
+      asciidoc.toc(toclevels);
+    }
+  }
+
+  function reinstallAndRemoveTimer() {
+    clearInterval(timerId);
+    reinstall();
+  }
+
+  timerId = setInterval(reinstall, 500);
+  if (document.addEventListener)
+    document.addEventListener("DOMContentLoaded", reinstallAndRemoveTimer, false);
+  else
+    window.onload = reinstallAndRemoveTimer;
+}
+
+}
+asciidoc.install();
+/*]]>*/
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8949203-6']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body class="article">
+<div id="header">
+<h1>Pan Lu</h1>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="imageblock" style="float:right;">
+<div class="content">
+<img src="./files/panlu.jpg" alt="Pan Lu" width="160">
+</div>
+</div>
+<div class="paragraph"><p>
+  I received my Science Master degree in Department of Computer Science and Technology of Tsinghua University, supervised by <a href="http://dbgroup.cs.tsinghua.edu.cn/wangjy/">Prof. Jianyong Wang</a>. I received my B.Eng. degree in School of Automation, Beijing Institute of Technology (BIT), 2015. 
+</p></div>
+<div class="paragraph"><p>
+  I was a research intern with NLC Group, MSRA from Nov. 2017 to May 2018, working with <a href="https://www.microsoft.com/en-us/research/people/leiji/">Dr. Lei Ji</a>, <a href="https://www.microsoft.com/en-us/research/people/nanduan/">Nan Duan</a> and <a href="https://www.microsoft.com/en-us/research/people/mingzhou/">Ming Zhou</a>.
+  Before that, I was a visiting student with <a href="http://mmlab.ie.cuhk.edu.hk/index.html">Multimedia Laboratory, CUHK</a> from Aug 2016 to Oct 2017, working with <a href="http://www.ee.cuhk.edu.hk/~hsli/">Prof. Hongsheng Li</a> and <a href="http://www.ee.cuhk.edu.hk/~xgwang/">Xiaogang Wang</a>.
+</p></div>
+<div class="paragraph"><p>
+
+I am interested in <strong>Computer Vision</strong> (like Visual Question Answering), <strong>NLP</strong>, <strong>Data Mining</strong>, especially in <strong>Learning and Reasoning</strong> for vision, language, common sense and action.
+</p></div>
+</div>
+</div>
+
+<div class="sect1">
+<h2 id="_education">News!</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+Invited as ICDM 2019 External Reviewer!
+<p></p>
+</li>
+
+
+
+
+
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_education">Education</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<strong>Science Master in Computer Science</strong>, <em>Tsinghua University</em>, 2015.08 - 2018.07 
+</p><p> Rank 3/168, Advisor: Prof. Jianyong Wang  </p>
+<p></p>
+</li>
+
+<li>
+<p>
+<strong>Research Visiting Student</strong>, <em>The Chinese University of Hong Kong</em>, 2016.08 - 2017.10
+</p><p> Advisors: Prof. Hongsheng Li, Xiaogang Wang </p>
+<p></p>
+</li>
+
+<li>
+<p>
+<strong>Bachelor in Electrical Engineering</strong> , <em>Beijing Institute of Technology</em>, 2011.08 - 2015.06
+</p><p> Rank 1/273, GPA: 93.73/100 </p>
+<p></p>
+</li>
+
+
+
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publication">Selected Publications</h2>
+
+<h4>Conference Proceedings</h4>
+<div class="sectionbody">
+<div class="olist arabic"><ol class="arabic">
+
+<li>
+<p>
+<em>Learning Long- and Short-Term User Literal-Preference with Multimodal Hierarchical Transformer Network for Personalized Image Caption</em>
+</p><p>
+Wei Zhang, Yue Ying, <strong>Pan Lu</strong>, Hongyuan Zha
+</p>
+<p>
+<strong>AAAI 2020 (Full Paper)</strong> 
+[<a href="https://lupantech.github.io/files/AAAI20_caption.pdf">pdf</a>]
+</p>
+</li>
+
+
+<li>
+<p>
+<em>Knowledge Aware Semantic Concept Expansion for Image-Text Matching</em>
+</p><p>
+Botian Shi, Lei Ji, <strong>Pan Lu</strong>, Nan Duan
+</p>
+<p>
+<strong>IJCAI 2019 (Full Paper)</strong> 
+[<a href="https://lupantech.github.io/files/IJCAI19_matching.pdf">pdf</a>]
+</p>
+</li>
+
+
+<li>
+<p>
+<em>Dynamic Fusion with Intra- and Inter-modality Attention Flow for Visual Question Answering</em>
+</p><p>
+Peng Gao, Zhengkai Jiang, Haoxuan You, <strong>Pan Lu</strong>, Steven CH Hoi, Xiaogang Wang, Hongsheng Li
+</p>
+<p>
+<strong>CVPR 2019 (Full Paper, Oral)</strong> 
+[<a href="https://lupantech.github.io/files/PKDD2019_hybrid_seq.pdf">pdf</a>]
+</p>
+</li>
+
+<li>
+<p>
+<em>A Novel Hybrid Sequential Model for Review-based Rating Prediction</em>
+</p><p>
+Yuanquan Lu, Wei Zhang, <strong>Pan Lu</strong>, Jianyong Wang
+</p>
+<p>
+<strong>PAKDD, 2019 (Full Paper)</strong> 
+[<a href="https://lupantech.github.io/files/PKDD2019_hybrid_seq.pdf">pdf</a>]
+</p>
+</li>
+
+
+<li>
+<p>
+<em>Knowledge-Aware Deep Dual Networks for Text-Based Mortality Prediction</em>
+</p><p>
+Ning Liu, <strong>Pan Lu</strong>, Wei Zhang, Jianyong Wang
+</p>
+<p>
+<strong>ICDE, 2019 (Full Paper)</strong> 
+[<a href="https://lupantech.github.io/files/ICDE19_knowledge.pdf">pdf</a>]
+</p>
+</li>
+
+
+<li>
+<p>
+<em>Question-Guided Hybrid Convolution for Visual Question Answering</em>
+</p><p>
+Peng Gao, <strong>Pan Lu</strong>, Hongsheng Li, Shuang Li, Yikang Li, Steven Hoi, Xiaogang Wang
+</p>
+<p>
+<strong>ECCV, 2018 (Full Paper)</strong> 
+[<a href="https://lupantech.github.io/files/ECCV18_hybrid_conv.pdf">pdf</a>]
+</p>
+</li>
+
+
+<li>
+<p>
+<em>R-VQA: Learning Visual Relation Facts with Semantic Attention for Visual Question Answering</em>
+</p>
+<p>
+<strong>Pan Lu</strong>, Lei Ji, Wei Zhang, Nan Duan, Ming Zhou, Jianyong Wang
+</p>
+<p>
+<strong>SIGKDD, 2018 (Full Paper, Oral)</strong> 
+[<a href="https://lupantech.github.io/files/KDD18_rvqa.pdf">pdf</a>]
+[<a href="https://github.com/lupantech/rvqa">project</a>]
+[<a href="https://www.youtube.com/watch?v=OQoqpRuY4L4">video</a>]
+</p>
+</li>
+
+
+<li>
+  <p>
+    <em>Co-attending Free-form Regions and Detections with Multi-modal Multiplicative Feature Embedding for Visual Question Answering</em>
+  </p><p>
+    <strong>Pan Lu</strong>, Hongsheng Li, Wei Zhang, Jianyong Wang, Xiaogang Wang
+  </p>
+<p>
+  <strong>AAAI, 2018 (Full Paper, Spotlight)</strong> 
+  [<a href="https://lupantech.github.io/files/AAAI18_dualvqa.pdf">pdf</a>] 
+  [<a href="https://github.com/lupantech/dual-mfa-vqa">code</a>] 
+  [<a href="https://github.com/lupantech/lupantech.github.io/raw/master/files/aaai18_poster_final.pdf">poster</a>]
+</p>
+</li>
+
+
+</ol></div>
+
+<h4>Master Thesis</h4>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+
+
+<li>
+  <p>
+    <em>Attention Mechanisms for Visual Question Answering</em>
+  </p><p>
+  <strong>Outstanding Master Degree Thesis, Tsinghua University, 2018</strong> 
+</p>
+</li>
+
+
+
+</ol></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_education">Experience</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+
+<li>
+<p>
+<strong>Research Intern</strong>, <em>NLC Group</em>, <em> Microsoft Research Asia</em>, 2017.11 - 2018.05
+</p><p> Advisors: Dr. Lei Ji, Nan Duan, Ming Zhou </p>
+<p></p>
+</li>
+
+<li>
+<p>
+<strong>Research Assistant</strong>, <em>Multimedia Lab</em>, <em>The Chinese University of Hong Kong</em>, 2016.08 - 2017.10 
+</p><p> Advisors: Prof. Hongsheng Li, Xiaogang Wang </p>
+<p></p>
+</li>
+
+<li>
+<p>
+<strong>Teaching Assistant</strong>, <em>Data Mining</em>, <em>Tsinghua University</em>, 2017.09 - 2018.01
+</p>
+</li>
+
+<li>
+<p>
+<strong>Teaching Assistant</strong>, <em>C Programming Language</em>, <em>Tsinghua University</em>, 2016.03 - 2016.06
+</p>
+</li>
+
+
+
+
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_selected_awards">Selected Awards</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+
+<li>
+<p>
+Outstanding Master Degree Thesis of Tsinghua University, 2018
+</p>
+</li>
+<li>
+<p>
+Outstanding Computer Science Graduate Award of Tsinghua University, 2018
+</p>
+</li>
+<li>
+<p>
+SIGKDD Student Scholarship, 2018
+</p>
+</li>
+<li>
+<p>
+  "Stars of Tomorrow" Excellent Intern of Microsoft Research, 2018
+</p>
+</li>
+<li>
+<p>
+AAAI Student Scholarship, 2017
+</p>
+</li>
+<li>
+<p>
+GuangHua Scholarship Award of Tsinghua University, 2016
+</p>
+</li>
+<li>
+<p>
+Outstanding College Graduate of Beijing, 2015
+</p>
+</li>
+<li>
+<p>
+The First Class Scholarship of Beijing Institute of Technology, 2012, 2013, 2014, 2015
+</p>
+</li>
+<li>
+<p>
+Champion of National College Student Innovation Conference, Chinese Ministry of Education, 2014
+</p>
+</li>
+<li>
+<p>
+National Scholarship (<em>for top 2% students in BIT</em>), Chinese Ministry of Education, 2014
+</p>
+</li>
+<li>
+<p>
+Outstanding Students of Beijing Institute of Technology (<em>for top 10 students in BIT</em>), 2014
+</p>
+</li>
+<li>
+<p>
+First Prize of America Mathematical Contest In Modeling, 2014
+</p>
+</li>
+<li>
+<p>
+President Scholarship Award of Beijing Institute of Technology (<em>for top 2 undergraduates in BIT</em>), 2013
+</p>
+</li>
+
+
+
+
+
+
+
+
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_some_useful_links">Some Useful Links</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">You and Your Research</a>, Richard Hamming, 1986. [<a href="https://github.com/lupantech/lupantech.github.io/raw/master/files/You%20and%20Your%20Research.pdf">pdf</a>] [<a href="https://www.youtube.com/watch?v=a1zDuOPkMSw">video</a>]
+</p>
+</li>
+<li>
+<p>
+Top publications - Google Scholar Metrics
+
+<p> <a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_artificialintelligence">Artificial Intelligence</a> </p>
+<p><a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_computationallinguistics">Computational Linguistics</a> </p>
+<p><a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_computervisionpatternrecognition">Computer Vision &amp; Pattern Recognition</a> </p>
+<p><a href="https://scholar.google.com/citations?view_op=top_venues&amp;hl=en&amp;vq=eng_datamininganalysis">Data Mining &amp; Analysis</a></p>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_contact">Contact</h2>
+<div class="sectionbody">
+<div class="ulist"><ul>
+<li>
+<p>
+<a href="mailto:lupantech(at)gmail(dot)com">lupantech[at]gmail[dot]com</a>
+</p>
+</li>
+<li>
+<p>
+<a href="https://scholar.google.com/citations?user=IyucsdQAAAAJ&amp;hl=en">Google Scholar</a>
+</p>
+</li>
+</ul></div>
+</div>
+</div>
+</div>
+
+
+<div id="footer">
+<div id="footer-text">
+Last updated 2019-01-18
+</div>
+</div>
+
+
+
+</div></body></html>
