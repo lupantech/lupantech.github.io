@@ -1,6 +1,6 @@
-@inproceedings{lu2021intergps,
-  title={Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning},
-  author={Lu, Pan; Gong, Ran; Jiang, Shibiao; Qiu, Liang; Huang, Siyuan; Liang, Xiaodan; Zhu, Song-Chun},
+@inproceedings{qiu2021socaog,
+  title={SocAoG: Incremental Graph Parsing for Social Relation Inference in Dialogues},
+  author={Qiu, Liang; Liang, Yuan; Zhao, Yizhou; Lu, Pan; Peng, Baolin; Yu, Zhou; Wu, Ying Nian; Zhu, Song-Chun},
   booktitle={The 59th Annual Meeting of the Association for Computational Linguistics (ACL)},
   year={2021}
 }
