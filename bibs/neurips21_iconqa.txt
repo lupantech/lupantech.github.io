@@ -1,0 +1,6 @@
+@inproceedings{lu2021inter,
+  title={IconQA: A New Benchmark for Abstract Diagram Understanding and Visual Language Reasoning},
+  author={Lu, Pan; Qiu, Liang; Chen, Jiaqi; Xia, Tony; Zhao, Yizhou; Zhang, Wei; Yu, Zhou; Liang, Xiaodan; Zhu, Song-Chun},
+  booktitle={The 35th Conference on Neural Information Processing Systems Track on Datasets and Benchmarks (NeurIPS 2021)},
+  year={2021}
+}
