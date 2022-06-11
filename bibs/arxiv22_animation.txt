@@ -1,0 +1,6 @@
+@article{zhao2022triangular,
+  title={Triangular Character Animation Sampling with Motion, Emotion, and Relation},
+  author={Zhao, Yizhou and Qiu, Liang and Ai, Wensi and Lu, Pan and Zhu, Song-Chun},
+  journal={arXiv preprint arXiv:2203.04930},
+  year={2022}
+}

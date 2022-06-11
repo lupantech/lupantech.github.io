@@ -1,0 +1,6 @@
+@article{zhao2021genmotion,
+  title={GenMotion: Data-driven Motion Generators for Real-time Animation Synthesis},
+  author={Zhao, Yizhou and Ai, Wensi and Qiu, Liang and Lu, Pan and Shi, Feng and Han, Tian and Zhu, Song-Chun},
+  journal={arXiv preprint arXiv:2112.06060},
+  year={2021}
+}
