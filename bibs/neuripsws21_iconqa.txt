@@ -1,0 +1,6 @@
+@inproceedings{lu2021towards,
+  title={Towards Diagram Understanding and Cognitive Reasoning in Icon Question Answering},
+  author={Lu, Pan; Qiu, Liang; Chen, Jiaqi; Xia, Tony; Zhao, Yizhou; Zhang, Wei; Yu, Zhou; Liang, Xiaodan; Zhu, Song-Chun},
+  booktitle={The 35th Conference on Neural Information Processing Systems (NeurIPS 2021) Workshop on Math AI for Education (MATHAI4ED)},
+  year={2021}
+}
