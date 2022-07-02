@@ -1,4 +1,4 @@
-@inproceedings{qiu2021towards,
+@inproceedings{qiu2022towards,
   title={Towards Socially Intelligent Agents with Mental State Transition and Human Utility},
   author={Qiu, Liang and Zhao, Yizhou and Liang, Yuan and Lu, Pan and Shi, Weiyan and Yu, Zhou and Zhu, Song-Chun},
   booktitle={The 23rd Annual Meeting of the Special Interest Group on Discourse and Dialogue (SIGDIAL)},
