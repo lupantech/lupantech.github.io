@@ -1,0 +1,6 @@
+@inproceedings{lu2022learn,
+  title={Learn to Explain: Multimodal Reasoning via Thought Chains for Science Question Answering},
+  author={Lu, Pan; Mishra, Swaroop; Xia, Tony; Qiu, Liang; Chang, Kai-Wei; Zhu, Song-Chun; Tafjord, Oyvind; Clark, Peter; Ashwin Kalyan},
+  booktitle={The 36th Conference on Neural Information Processing Systems (NeurIPS 2022)},
+  year={2022}
+}
