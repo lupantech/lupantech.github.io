@@ -1,0 +1,6 @@
+@article{lu2022dynamic,
+  title={Dynamic Prompt Learning via Policy Gradient for Semi-structured Mathematical Reasoning},
+  author={Lu, Pan and Qiu, Liang and Chang, Kai-Wei and Wu, Ying Nian and Zhu, Song-Chun and Rajpurohit, Tanmay and Clark, Peter and Kalyan, Ashwin},
+  journal={arXiv preprint arXiv:2209.14610},
+  year={2022}
+}
