@@ -1,6 +1,6 @@
 @inproceedings{lu2021inter,
   title={Inter-GPS: Interpretable Geometry Problem Solving with Formal Language and Symbolic Reasoning},
-  author={Lu, Pan; Gong, Ran; Jiang, Shibiao; Qiu, Liang; Huang, Siyuan; Liang, Xiaodan; Zhu, Song-Chun},
+  author={Lu, Pan and Gong, Ran and Jiang, Shibiao and Qiu, Liang and Huang, Siyuan and Liang, Xiaodan and Zhu, Song-Chun},
   booktitle={The 59th Annual Meeting of the Association for Computational Linguistics (ACL)},
   year={2021}
 }

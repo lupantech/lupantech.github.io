@@ -1,6 +1,6 @@
 @inproceedings{mishra2022lila,
   title={LILA: A Unified Benchmark for Mathematical Reasoning},
-  author={Mishra, Swaroop; Finlayson, Matthew; Lu, Pan; Tang, Leonard; Welleck, Sean; Baral, Chitta; Rajpurohit, Tanmay; Tafjord, Oyvind; Sabharwal, Ashish; Clark, Peter; Kalyan, Ashwin},
+  author={Mishra, Swaroop and Finlayson, Matthew and Lu, Pan and Tang, Leonard and Welleck, Sean and Baral, Chitta and Rajpurohit, Tanmay and Tafjord, Oyvind and Sabharwal, Ashish and Clark, Peter and Kalyan, Ashwin},
   booktitle={The 2022 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
   year={2022}
 }

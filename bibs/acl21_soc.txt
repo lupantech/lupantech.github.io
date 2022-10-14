@@ -1,6 +1,6 @@
 @inproceedings{qiu2021socaog,
   title={SocAoG: Incremental Graph Parsing for Social Relation Inference in Dialogues},
-  author={Qiu, Liang; Liang, Yuan; Zhao, Yizhou; Lu, Pan; Peng, Baolin; Yu, Zhou; Wu, Ying Nian; Zhu, Song-Chun},
+  author={Qiu, Liang and Liang, Yuan and Zhao, Yizhou and Lu, Pan and Peng, Baolin and Yu, Zhou and Wu, Ying Nian and Zhu, Song-Chun},
   booktitle={The 59th Annual Meeting of the Association for Computational Linguistics (ACL)},
   year={2021}
 }
