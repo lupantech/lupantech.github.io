@@ -18,19 +18,25 @@ a:hover {
 
 /* the icon color changes when the mouse hovers on it*/
 i:hover {
-    color: DODGERBLUE;
-    font-size: 32px;
+  color: DODGERBLUE;
+  font-size: 32px;
 }
 
 
 /* image border */
 img {
-    /* max-width: 240px; */
-    border:1px solid gainsboro;
+  /* max-width: 240px; */
+  border: 1px solid gainsboro;
 }
 
 /* h3 header */
 h3 {
-    padding-top: 80px; 
-    margin-top: -80px;
+  padding-top: 80px;
+  margin-top: -80px;
+}
+
+#logo {
+  width: 1.5em;
+  margin-right: 3px;
+  border: 0;
 }
