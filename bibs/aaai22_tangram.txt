@@ -1,5 +1,5 @@
 @inproceedings{zhao2022learning,
-  title={Co-attending free-form regions and detections with multi-modal multiplicative feature embedding for visual question answering},
+  title={Learning from the Tangram to Solve Mini Visual Tasks},
   author={Zhao, Yizhou and Qiu, Liang and Lu, Pan and Shi, Feng and Han Tian and Zhu, Song-Chun},
   booktitle={The AAAI Conference on Artificial Intelligence (AAAI)},
   year={2022}
