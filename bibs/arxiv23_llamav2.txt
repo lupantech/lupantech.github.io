@@ -1,6 +1,6 @@
 @article{gao2023llamaadapterv2,
   title = {LLaMA-Adapter V2: Parameter-Efficient Visual Instruction Model},
-  author={Gao, Peng and Han, Jiaming and Zhang, Renrui and Lin, Ziyi and Geng, Shijie and Zhou, Aojun and Zhang, Wei and Lu, Pan and He, Conghui and Yue, Xiangyu and Li, Hongsheng and Qiao Yu},
+  author={Gao, Peng and Han, Jiaming and Zhang, Renrui and Lin, Ziyi and Geng, Shijie and Zhou, Aojun and Zhang, Wei and Lu, Pan and He, Conghui and Yue, Xiangyu and Li, Hongsheng and Qiao, Yu},
   journal={arXiv preprint arXiv:2304.15010},
   year={2023}
 }
