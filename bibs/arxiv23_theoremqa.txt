@@ -1,0 +1,6 @@
+@article{chen2023theoremqa,
+  title={TheoremQA: A Theorem-driven Question Answering dataset},
+  author={Chen, Wenhu and Yin, Ming and Ku, Max and Lu, Pan and Wan, Elaine and Ma, Xueguang and Xu, Jianyu and Xia, Tony and Wang, Xinyi},
+  journal={arXiv preprint arXiv:2305.12524},
+  year={2023}
+}
