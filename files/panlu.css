@@ -40,3 +40,46 @@ h3 {
   margin-right: 3px;
   border: 0;
 }
+
+
+#div-image {
+  float: left;
+  width: 30%;
+  padding-top: 50px;
+  margin-left: -280px;
+}
+
+#div-bio {
+  padding-top: 50px; 
+  font-size: 18px
+}
+
+h3 {
+  font-size: 30px;
+}
+
+#more {
+  display: none;
+  }
+
+#showMoreBtn {
+  margin-left: 40%;
+}
+
+#div-news {
+  /* float: left; */
+  /* width: 30%; */
+  padding-top: 50px;
+  /* margin-left: -280px; */
+}
+
+#div-twitter {
+  width: 80%;
+  float: right;
+  padding-top: 120px;
+  margin-right: -780px;
+}
+
+.twitter {
+  float: right;
+}

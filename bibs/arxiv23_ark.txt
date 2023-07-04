@@ -1,0 +1,7 @@
+@inproceedings{gupta2023ark,
+	author = {Gupta, Abhinav and Huang, Qiuyuan and Park, Jae Sung and Lu, Pan and Bennett, Paul and Gong, Ran and Som, Subhojit and Peng, Baolin and Mohammed, Owais Khan and Pal, Chris and Choi, Yejin and Gao, Jianfeng},
+	title = {ArK: Augmented Reality with Knowledge Emergent Infrastructure},
+	year = {2023},
+	month = {April},
+	url = {https://www.microsoft.com/en-us/research/publication/ark/},
+}
