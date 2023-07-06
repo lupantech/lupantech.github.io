@@ -15,6 +15,11 @@ a:hover {
   color: #003399;
 }
 
+#best:hover {
+  color: red;
+}
+
+
 
 /* the icon color changes when the mouse hovers on it*/
 i:hover {
