@@ -1,0 +1,7 @@
+@misc{kokomind2023,
+   title = {KokoMind: Can Large Language Models Understand Social Interactions?},
+   url = {https://chats-lab.github.io/KokoMind/},
+   author = {Shi, Weiyan and Qiu, Liang and Xu, Dehong and Sui, Pengwei and Lu, Pan and Yu, Zhou},
+   month = {July},
+   year = {2023}
+}
