@@ -1,4 +1,4 @@
-@article{lu2023chameleon,
+@inproceedings{lu2023chameleon,
   title={Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models},
   author={Lu, Pan and Peng, Baolin and Cheng, Hao and Galley, Michel and Chang, Kai-Wei and Wu, Ying Nian and Zhu, Song-Chun and Gao, Jianfeng},
   booktitle={The 37th Conference on Neural Information Processing Systems (NeurIPS)},
