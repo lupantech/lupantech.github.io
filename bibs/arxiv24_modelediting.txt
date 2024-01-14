@@ -1,0 +1,6 @@
+@article{gu2024model,
+  title={Model Editing Can Hurt General Abilities of Large Language Models},
+  author={Gu, Jia-Chen and Xu, Hao-Xiang and Ma, Jun-Yu and Lu, Pan and Ling, Zhen-Hua and Chang, Kai-Wei and Peng, Nanyun},
+  journal={arXiv preprint arXiv:2401.04700},
+  year={2024}
+}
