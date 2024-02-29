@@ -1,6 +1,6 @@
 @article{gao2024sphinx,
   title={SPHINX-X: Scaling Data and Parameters for a Family of Multi-modal Large Language Models},
-  author={Gao, Peng; Zhang, Renrui; Liu, Chris; Qiu, Longtian; Huang, Siyuan; Lin, Weifeng; Zhao, Shitian; Geng, Shijie; Lin, Ziyi; Jin, Peng; Zhang, Kaipeng; Shao, Wenqi; Xu, Chao; He, Conghui; He, Junjun; Shao, Hao; Lu, Pan; Li, Hongsheng; Qiao, Yu},
+  author={Gao, Peng and Zhang, Renrui and Liu, Chris and Qiu, Longtian and Huang, Siyuan and Lin, Weifeng and Zhao, Shitian and Geng, Shijie and Lin, Ziyi and Jin, Peng and Zhang, Kaipeng and Shao, Wenqi and Xu, Chao and He, Conghui and He, Junjun and Shao, Hao and Lu, Pan and Li, Hongsheng and Qiao, Yu},
   journal={arXiv preprint arXiv:2402.05935},
   year={2024}
 }
