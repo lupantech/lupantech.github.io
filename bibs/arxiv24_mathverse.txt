@@ -1,0 +1,6 @@
+@article{mathverse2024zhang,
+  title={MathVerse: Does Your Multi-modal LLM Truly See the Diagrams in Visual Math Problems?},
+author={Zhang, Renrui and Jiang, Dongzhi and Zhang, Yichi and Lin, Haokun and Guo, Ziyu and Qiu, Pengshuo and Zhou, Aojun and Lu, Pan and Chang, Kai-Wei and Gao, Peng and Li, Hongsheng},
+  journal={arXiv preprint arXiv:2403.14624},
+  year={2024}
+}
