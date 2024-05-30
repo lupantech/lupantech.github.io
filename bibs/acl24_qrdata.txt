@@ -1,6 +1,6 @@
-@article{liu2024llms,
+@inproceedings{liu2024llms,
     title={Are LLMs Capable of Data-based Statistical and Causal Reasoning? Benchmarking Advanced Quantitative Reasoning with Data},
     author={Liu, Xiao and Wu, Zirui and Wu, Xueqing and Lu, Pan and Chang, Kai-Wei and Feng, Yansong},
-    journal={arXiv preprint arXiv:2402.17644},
+    booktitle={Findings of the Annual Meeting of the Association for Computational Linguistics (ACL)},
     year={2024}
 }

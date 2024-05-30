@@ -1,6 +1,0 @@
-@article{lu2022dl4math,
-  title={A Survey of Deep Learning for Mathematical Reasoning},
-  author={Lu, Pan and Qiu, Liang and Yu, Wenhao and Welleck, Sean and Chang, Kai-Wei},
-  journal={arXiv preprint arXiv:2212.10535},
-  year={2022}
-}

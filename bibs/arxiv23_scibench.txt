@@ -1,6 +1,0 @@
-@article{wang2023scibench,
-  title={SciBench: Evaluating College-Level Scientific Problem-Solving Abilities of Large Language Models},
-    author = {Wang, Xiaoxuan and Hu, Ziniu and Lu, Pan and Zhu, Yanqiao and Zhang, Jieyu and Subramaniam, Satyen and Loomba, Arjun R. and Zhang, Shichang and Sun, Yizhou and Wang, Wei},
-  journal={arXiv preprint arXiv:2305.00970},
-  year={2023}
-}
