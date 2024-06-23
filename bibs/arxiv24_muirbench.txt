@@ -1,0 +1,6 @@
+@article{wang2024muirbench,
+  title={MuirBench: A Comprehensive Benchmark for Robust Multi-image Understanding},
+  author={Wang, Fei and Fu, Xingyu and Huang, James Y and Li, Zekun and Liu, Qin and Liu, Xiaogeng and Ma, Mingyu Derek and Xu, Nan and Zhou, Wenxuan and Zhang, Kai and others},
+  journal={arXiv preprint arXiv:2406.09411},
+  year={2024}
+}
