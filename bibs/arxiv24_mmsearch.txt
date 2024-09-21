@@ -1,0 +1,6 @@
+@article{jiang2024mmsearch,
+    title={MMSearch: Benchmarking the Potential of Large Models as Multi-modal Search Engines},
+    author={Jiang, Dongzhi and Zhang, Renrui and Guo, Ziyu and Wu, Yanmin and Lei, Jiayi and Qiu, Pengshuo and Lu, Pan and Chen, Zehui and Song, Guanglu and Gao, Peng and Liu, Yu and Li, Chunyuan and Li, Hongsheng},
+    journal={arXiv preprint arXiv:2406.09411},
+    year={2024}
+}

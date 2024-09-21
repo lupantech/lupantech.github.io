@@ -1,0 +1,6 @@
+@inproceedings{lu2024multimodal,
+    title={Multimodal Procedural Planning via Dual Text-Image Prompting},
+    author={Yujie Lu and Pan Lu and Zhiyu Chen and Wanrong Zhu and Xin Eric Wang and William Yang Wang},
+    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
+    year={2024}
+}

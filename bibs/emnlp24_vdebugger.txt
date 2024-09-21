@@ -1,6 +1,6 @@
-@article{wu2024vdebugger,
+@inproceedings{wu2024vdebugger,
     title={VDebugger: Harnessing Execution Feedback for Debugging Visual Programs},
     author={Xueqing Wu and Zongyu Lin and Songyan Zhao and Te-Lin Wu and Pan Lu and Nanyun Peng and Kai-Wei Chang},
-    journal={arXiv preprint arXiv:2406.13444},
+    booktitle={The 2024 Conference on Empirical Methods in Natural Language Processing (EMNLP)},
     year={2024}
 }
