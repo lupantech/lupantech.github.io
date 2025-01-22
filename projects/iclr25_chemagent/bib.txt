@@ -1,0 +1,6 @@
+@inproceedings{tang2025chemagent,
+    title={ChemAgent: Self-updating Library in Large Language Models Improves Chemical Reasoning},
+    author={Tang, Xiangru and Hu, Tianyu and Ye, Muyang and Shao, Yanjun and Yin, Xunjian and Ouyang, Siru and Zhou, Wangchunshu and Lu, Pan and Zhang, Zhuosheng and Zhao, Yilun and Cohan, Arman and Gerstein, Mark},
+    booktitle={International Conference on Learning Representations (ICLR)},
+    year={2025}
+}
