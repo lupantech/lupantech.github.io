@@ -1,0 +1,6 @@
+@article{xiao2025protein,
+    author = {Xiao, Yijia and Zhao, Wanjia and Zhang, Junkai and Jin, Yiqiao and Zhang, Han and Ren, Zhicheng and Sun, Renliang and Wang, Haixin and Wan, Guancheng and Lu, Pan and Luo, Xiao and Zhang, Yu and Zou, James and Sun, Yizhou and Wang, Wei},
+    title = {Protein Large Language Models: A Comprehensive Survey},
+    journal = {arXiv preprint arXiv:2502.17504},
+    year = {2025}
+}

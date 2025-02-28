@@ -1,0 +1,6 @@
+@inproceedings{wu2025visco,
+    title={VISCO: Benchmarking Fine-Grained Critique and Correction Towards Self-Improvement in Visual Reasoning},
+    author={Wu, Xueqing and Ding, Yuheng and Li, Bingxuan and Lu, Pan and Yin, Da and Chang, Kai-Wei and Peng, Nanyun},
+    booktitle={The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2025 (CVPR)},
+    year={2025}
+}
