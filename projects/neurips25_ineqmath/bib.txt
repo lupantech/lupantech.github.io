@@ -1,6 +1,6 @@
-@article{sheng2025solving,
+@inproceedings{sheng2025solving,
   title={Solving Inequality Proofs with Large Language Models},
   author={Sheng, Jiayi and Lyu, Luna and Jin, Jikai and Xia, Tony and Gu, Alex and Zou, James and Lu, Pan},
-  journal={arXiv preprint arXiv:2506.07927},
+  booktitle={The 38th Conference on Neural Information Processing Systems (NeurIPS)},
   year={2025}
 }

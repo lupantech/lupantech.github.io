@@ -1,7 +1,10 @@
-@article{yuksekgonul2024textgrad,
-      title={TextGrad: Automatic "Differentiation" via Text},
-      author={Mert Yuksekgonul and Federico Bianchi and Joseph Boen and Sheng Liu and Zhi Huang and Carlos Guestrin and James Zou},
-      year={2024},
-      eprint={2406.07496},
-      archivePrefix={arXiv}
+@article{yuksekgonul2025optimizing,
+  title={Optimizing generative AI by backpropagating language model feedback},
+  author={Yuksekgonul, Mert and Bianchi, Federico and Boen, Joseph and Liu, Sheng and Lu, Pan and Huang, Zhi and Guestrin, Carlos and Zou, James},
+  journal={Nature},
+  volume={639},
+  number={8055},
+  pages={609--616},
+  year={2025},
+  publisher={Nature Publishing Group}
 }
