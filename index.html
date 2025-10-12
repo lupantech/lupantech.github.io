@@ -624,6 +624,9 @@
 		<h3 id="Travels" style="">Upcoming Travel</h3>
 		<hr>
 		<ul>
+			<li>October 25 - October 26, 2025:
+				<a href="" target="_blank">Stanford NLP Retreat, California</a>
+			</li>
 			<li>December 2 - December 7, 2025:
 				<a href="https://neurips.cc/" target="_blank">NeurIPS 2025 at San Diego, California</a>
 			</li>
@@ -647,9 +650,22 @@
 		All publications can be found on my <a href="https://scholar.google.com/citations?user=IyucsdQAAAAJ&hl=en" target="_blank">Google Scholar</a> page.
 		<br>
 		<br>
+		
+		<!-- Category Filter Buttons -->
+		<div class="category-buttons" style="margin-bottom: 5px;">
+			<button class="category-btn active" data-category="all">All</button>
+			<button class="category-btn" data-category="highlights">Highlights</button>
+			<button class="category-btn" data-category="agentic">Agentic AI</button>
+			<button class="category-btn" data-category="llm-reasoning">LLM/VLM Reasoning</button>
+			<!-- <button class="category-btn" data-category="vlm-reasoning">VLM Reasoning</button> -->
+			<button class="category-btn" data-category="ai-math">AI for Math</button>
+			<button class="category-btn" data-category="ai-science">AI for Science</button>
+			<button class="category-btn" data-category="others">Others</button>
+		</div>
+		<br>
 
 		<!-- AgentFlow -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, agentic">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/arxiv25_agentflow/cover.png" style="" alt="">
 			</div>
@@ -680,8 +696,117 @@
 		</div>
 		<hr>
 
+		<!-- TaTToo -->
+		<div class="row publication-item" data-category="agentic">
+			<div class="col-md-3">
+				<img class="img-fluid img-rounded" src="projects/arxiv25_tattoo/cover.png" style="" alt="">
+			</div>
+			<div class="col-md-9">
+				<b>
+					<font color="black">
+						TaTToo: Tool-Grounded Thinking PRM for Test-Time Scaling in Tabular Reasoning
+					</font>
+				</b><br>
+				Jiaru Zou, Soumya Roy, Vinay Kumar Verma, Ziyi Wang, David Wipf, <b>Pan Lu</b>, Sumit Negi, James Zou, Jingrui He
+				<br>
+				<b><a href="https://arxiv.org/abs/2510.06217" target="_blank">arXiv:2510.06217&nbsp;</a></b>
+				<a href="https://huggingface.co/papers/2510.06217" target="_blank"> <small>[Paper]&nbsp;</small></a>
+				<a href="projects/arxiv25_tattoo/bib.txt" target="_blank"> <small>[BibTex]</small></a>
+			</div>
+		</div>
+		<hr>
+
+		<!-- AgentDebug -->
+		<div class="row publication-item" data-category="agentic">
+			<div class="col-md-3">
+				<img class="img-fluid img-rounded" src="projects/arxiv25_agentdebug/cover.png" style="" alt="">
+			</div>
+			<div class="col-md-9">
+				<b>
+					<font color="black">
+						Where LLM Agents Fail and How They can Learn From Failures
+					</font>
+				</b><br>
+				Kunlun Zhu*, Zijia Liu*, Bingxuan Li*, Muxin Tian*, Yingxuan Yang, Jiaxun Zhang, Pengrui Han, Qipeng Xie, Fuyang Cui, Weijia Zhang, Xiaoteng Ma, Xiaodong Yu, Gowtham Ramesh, Jialian Wu, Zicheng Liu, <b>Pan Lu†</b>, James Zou†, Jiaxuan You†
+				<br>
+				<b><a href="https://arxiv.org/abs/2509.25370" target="_blank">arXiv:2509.25370&nbsp;</a></b>
+				<a href="https://huggingface.co/papers/2509.25370" target="_blank"> <small>[Paper]&nbsp;</small></a>
+				<a href="https://github.com/ulab-uiuc/AgentDebug" target="_blank"> <small>[Code]&nbsp;</small></a>
+				<a href="projects/arxiv25_agentdebug/bib.txt" target="_blank"> <small>[BibTex]</small></a>
+				<br>(*Equal Contribution) (†Co-senior authors)<br>
+			</div>
+		</div>
+		<hr>
+
+		<!-- DeeptraceReward -->
+		<div class="row publication-item" data-category="llm-reasoning">
+			<div class="col-md-3">
+				<img class="img-fluid img-rounded" src="projects/arxiv25_deeptracereward/cover.png" style="" alt="">
+			</div>
+			<div class="col-md-9">
+				<b>
+					<font color="black">
+						Learning Human-Perceived Fakeness in AI-Generated Videos via Multimodal LLMs
+					</font>
+				</b><br>
+				Xingyu Fu, Siyi Liu, Yinuo Xu, <b>Pan Lu</b>, Guangqiuse Hu, Tianbo Yang, Taran Anantasagar, Christopher Shen, Yikai Mao, Yuanzhe Liu, Keyush Shah, Chung Un Lee, Yejin Choi, James Zou, Dan Roth, Chris Callison-Burch
+				<br>
+				<b><a href="https://arxiv.org/abs/2509.22646" target="_blank">2509.22646&nbsp;</a></b>
+				<a href="https://deeptracereward.github.io/" target="_blank"> <small>[Project]&nbsp;</small></a>
+				<a href="https://huggingface.co/papers/2509.22646" target="_blank"> <small>[Paper]&nbsp;</small></a>
+				<a href="https://github.com/deeptracereward/deeptracereward" target="_blank"> <small>[Code]&nbsp;</small></a>
+				<a href="https://huggingface.co/datasets/DeeptraceReward/RewardData" target="_blank"> <small>[Data]&nbsp;</small></a>
+				<a href="projects/arxiv25_deeptracereward/bib.txt" target="_blank"> <small>[BibTex]</small></a>
+			</div>
+		</div>
+		<hr>
+
+		<!-- Fractional Reasoning -->
+		<div class="row publication-item" data-category="llm-reasoning">
+			<div class="col-md-3">
+				<img class="img-fluid img-rounded" src="projects/arxiv25_fractional/cover.png" style="" alt="">
+			</div>
+			<div class="col-md-9">
+				<b>
+					<font color="black">
+						Fractional Reasoning via Latent Steering Vectors Improves Inference Time Compute
+					</font>
+				</b><br>
+				Sheng Liu, Tianlang Chen, <b>Pan Lu</b>, Haotian Ye, Yizheng Chen, Lei Xing, James Zou
+				<br>
+				<b><a href="https://arxiv.org/abs/2506.15882" target="_blank">2506.15882&nbsp;</a></b>
+				<a href="https://shengliu66.github.io/fractreason/" target="_blank"> <small>[Project]&nbsp;</small></a>
+				<a href="https://huggingface.co/papers/2506.15882" target="_blank"> <small>[Paper]&nbsp;</small></a>
+				<a href="https://github.com/shengliu66/FractionalReason" target="_blank"> <small>[Code]&nbsp;</small></a>
+				<a href="projects/arxiv25_fractional/bib.txt" target="_blank"> <small>[BibTex]</small></a>
+			</div>
+		</div>
+		<hr>
+
+
+		<!-- W4S -->
+		<div class="row publication-item" data-category="agentic">
+			<div class="col-md-3">
+				<img class="img-fluid img-rounded" src="projects/colm25_w4s/cover.png" style="" alt="">
+			</div>
+			<div class="col-md-9">
+				<b>
+					<font color="black">
+						Weak-for-Strong: Training Weak Meta-Agent to Harness Strong Executors
+					</font>
+				</b><br>
+				Fan Nie, Lan Feng, Haotian Ye, Weixin Liang, <b>Pan Lu†</b>, Huaxiu Yao, Alexandre Alahi, James Zou 
+				<br>
+				<b><a href="https://arxiv.org/abs/2504.04785" target="_blank">COLM 2025&nbsp;</a></b>
+				<a href="https://arxiv.org/abs/2504.04785" target="_blank"> <small>[Paper]&nbsp;</small></a>
+				<a href="https://github.com/fannie1208/W4S" target="_blank"> <small>[Code]&nbsp;</small></a>
+				<a href="projects/colm25_w4s/bib.txt" target="_blank"> <small>[BibTex]</small></a>
+			</div>
+		</div>
+		<hr>
+
 		<!-- IneqMath -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/neurips25_ineqmath/cover.png" style="" alt="">
 			</div>
@@ -714,7 +839,7 @@
 		<hr>
 
 		<!-- OctoTools -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, agentic">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/arxiv25_octotools/cover.png" style="" alt="">
 			</div>
@@ -751,7 +876,7 @@
 		<hr>
 
 		<!-- TextGrad -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, llm-reasoning, ai-science">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/nature25_textgrad/cover.png" style="" alt="">
 			</div>
@@ -784,7 +909,7 @@
 		<hr>
 
 		<!-- Protein-LLM -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-science">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/arxiv25_protein-llm/cover.png" style="" alt="">
 			</div>
@@ -808,7 +933,7 @@
 		<hr>
 
 		<!-- VISCO -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/cvpr25_visco/cover.png" style="" alt="">
 			</div>
@@ -832,7 +957,7 @@
 		<hr>
 
 		<!-- ChemAgent -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-science, agentic">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/iclr25_chemagent/cover.png" style="" alt="">
 			</div>
@@ -856,7 +981,7 @@
 		<hr>
 
 		<!-- MRAG -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/iclr25_mrag/cover.png" style="" alt="">
 			</div>
@@ -880,7 +1005,7 @@
 		<hr>
 
 		<!-- MMSearch -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/iclr25_mmsearch/cover.png" style="" alt="">
 			</div>
@@ -906,7 +1031,7 @@
 		<hr>
 
 		<!-- MuirBench -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="projects/iclr25_muirbench/cover.png" style="" alt="">
 			</div>
@@ -934,7 +1059,7 @@
 		<hr>
 
 		<!-- STIC -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/neurips24_stic.png" style="" alt="">
 			</div>
@@ -967,7 +1092,7 @@
 		<hr>
 
 		<!-- Model Editing -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp24_modelediting.png" style="" alt="">
 			</div>
@@ -994,7 +1119,7 @@
 		<hr>
 
 		<!-- VDebugger -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp24_vdebugger.png" style="" alt="">
 			</div>
@@ -1021,7 +1146,7 @@
 		<hr>
 
 		<!-- MPP -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp24_mpp.png" style="" alt="">
 			</div>
@@ -1046,7 +1171,7 @@
 		<hr>
 		
 		<!-- MathVerse -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/arxiv24_mathverse.png" style="" alt="">
 			</div>
@@ -1074,7 +1199,7 @@
 		<hr>
 
 		<!-- QRData -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/acl24_qrdata.png" style="" alt="">
 			</div>
@@ -1099,7 +1224,7 @@
 		<hr>
 
 		<!-- SciBench -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-science">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/icml24_scibench.png" style="" alt="">
 			</div>
@@ -1130,7 +1255,7 @@
 		<hr>
 
 		<!-- SPHINX-X -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/icml24_sphinx.png" style="" alt="">
 			</div>
@@ -1157,7 +1282,7 @@
 		<hr>
 
 		<!-- MathVista -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/iclr24_mathvista.png" style="" alt="">
 			</div>
@@ -1201,7 +1326,7 @@
 		<hr>
 
 		<!-- LLaMA-Adapter -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/iclr24_llama.png" style="" alt="">
 			</div>
@@ -1231,7 +1356,7 @@
 		<hr>
 
 		<!-- Chameleon -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, agentic">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/neurips23_chameleon.png" style="" alt="">
 			</div>
@@ -1269,7 +1394,7 @@
 		<hr>
 
 		<!-- KokoMind -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/kokomind2023.png" style="" alt="">
 			</div>
@@ -1292,7 +1417,7 @@
 		<hr>
 
 		<!-- TheoremQA -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp23_theoremqa.png" style="" alt="">
 			</div>
@@ -1315,27 +1440,8 @@
 		</div>
 		<hr>
 
-		<!-- Ark -->
-		<!-- <div class="row">
-			<div class="col-md-3">
-				<img class="img-fluid img-rounded" src="imgs/arxiv23_ark.png" style="" alt="">
-			</div>
-			<div class="col-md-9">
-				<b>
-					<font color="black">ArK: Augmented Reality with Knowledge Emergent Infrastructure</font>
-				</b><br>
-				Abhinav Gupta*, Qiuyuan Huang*, Jae Sung Park*, <strong>Pan Lu</strong>*, Paul N. Bennett, Ran Gong, Subhojit Som, Baolin Peng, Owais Khan Mohammed, Christopher Pal, Yejin Choi, Jianfeng Gao<br>
-				<b><a href="https://arxiv.org/abs/2305.00970" target="_blank">arXiv:2305.00970&nbsp;</a></b>
-				<a href="papers/arxiv23_ark.pdf" target="_blank"> <small>[Paper]&nbsp;</small></a>
-				<a href="https://www.microsoft.com/en-us/research/uploads/prod/2023/04/ArK.pdf" target="_blank"> <small>[PDF]&nbsp;</small></a>
-				<a href="bibs/arxiv23_ark.txt" target="_blank"> <small>[BibTex]</small></a><br>
-				(*Equal Contribution)
-			</div>
-		</div>
-		<hr> -->
-
 		<!-- LLaMA-Adapter-V2 -->
-		<div class="row">
+		<div class="row publication-item" data-category="llm-reasoning">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/arxiv23_llamav2.png" style="" alt="">
 			</div>
@@ -1364,7 +1470,7 @@
 		<hr>
 
 		<!-- Survey -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/acl23_dl4math.png" style="" alt="">
 			</div>
@@ -1395,7 +1501,7 @@
 		<hr>
 
 		<!-- TabMWP -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/iclr23_promptpg.png" style="" alt="">
 			</div>
@@ -1429,7 +1535,7 @@
 		<hr>
 
 		<!-- ScienceQA -->
-		<div class="row">
+		<div class="row publication-item" data-category="highlights, ai-science">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/neurips22_scienceqa.png" style="" alt="">
 			</div>
@@ -1470,7 +1576,7 @@
 		<hr>
 
 		<!-- Lila -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp22_lila.png" style="" alt="">
 			</div>
@@ -1501,7 +1607,7 @@
 		<hr>
 
 		<!-- UniGeo -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/emnlp22_unigeo.png" style="" alt="">
 			</div>
@@ -1522,7 +1628,7 @@
 		<hr>
 
 		<!-- Mind -->
-		<div class="row">
+		<div class="row publication-item" data-category="agentic">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/arxiv21_mind.png" style="" alt="">
 			</div>
@@ -1561,7 +1667,7 @@
 		<hr> -->
 
 		<!-- AAAI22 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/aaai22_tangram.png" style="" alt="">
 			</div>
@@ -1582,7 +1688,7 @@
 		<hr>
 
 		<!-- AAAI22 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/aaai22_valuenet.png" style="" alt="">
 			</div>
@@ -1621,7 +1727,7 @@
 		<hr> -->
 
 		<!-- NeurIPS21 -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/neurips21_iconqa.png" style="" alt="">
 			</div>
@@ -1648,7 +1754,7 @@
 		<hr>
 
 		<!-- ACL21 -->
-		<div class="row">
+		<div class="row publication-item" data-category="ai-math">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/acl21_gps.png" style="" alt="">
 			</div>
@@ -1681,7 +1787,7 @@
 		<hr>
 
 		<!-- ACL21 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/acl21_soc.png" style="" alt="">
 			</div>
@@ -1702,7 +1808,7 @@
 		<hr>
 
 		<!-- AAAI20 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/aaai20_caption.png" style="" alt="">
 			</div>
@@ -1721,7 +1827,7 @@
 		<hr>
 
 		<!-- IJCAI19 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/ijcai19_matching.png" style="" alt="">
 			</div>
@@ -1739,7 +1845,7 @@
 		<hr>
 
 		<!-- CVPR19 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/cvpr19_dynamicvqa.png" style="" alt="">
 			</div>
@@ -1775,7 +1881,7 @@
 		</div><hr> -->
 
 		<!-- ICDE19  -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/icde19_knowledge.png" style="" alt="">
 			</div>
@@ -1792,7 +1898,7 @@
 		<hr>
 
 		<!-- ECCV18 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/eccv18_hybridvqa.png" style="" alt="">
 			</div>
@@ -1810,7 +1916,7 @@
 		<hr>
 
 		<!-- SIGKDD18 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/kdd18_rvqa.png" style="" alt="">
 			</div>
@@ -1831,7 +1937,7 @@
 		<hr>
 
 		<!-- AAAI18 -->
-		<div class="row">
+		<div class="row publication-item" data-category="others">
 			<div class="col-md-3">
 				<img class="img-fluid img-rounded" src="imgs/aaa18_dualvqa.png" style="" alt="">
 			</div>
@@ -1851,48 +1957,6 @@
 		<hr>
 
 	</div><br>
-
-
-	<!-- Experience -->
-	<!-- <div class="container">
-		<h3 id="Experience" style="">Selected Experience</h3>
-		<hr>
-		<ul>
-			<li>
-				<strong>Research Intern</strong>, <em>Microsoft Research</em>, 2022.12 - 2023.12 <br>
-				Mentors: 
-				Dr. <a href="https://sites.google.com/site/hcheng2site" target="_blank">Hao Cheng</a>,
-				Dr. <a href="https://www.microsoft.com/en-us/research/people/mgalley/" target="_blank">Michel Galley</a>,
-				Dr. <a href="https://www.microsoft.com/en-us/research/people/jfgao/" target="_blank">Jianfeng Gao</a>
-			</li>
-			<li>
-				<strong>Research Intern</strong>, <em>Allen Institute for AI (AI2)</em>, 2022.3 - 2022.12 <br>
-				Mentors: Dr. <a href="http://ashwinkalyan.com/" target="_blank">Ashwin Kalyan</a>,
-				Dr. <a href="https://allenai.org/team/peterc" target="_blank">Peter Clark</a>
-			</li>
-			<li>
-				<strong>Research Intern</strong>, <em>Document Intelligence Group</em>, <em>Adobe Research</em>, 2021.6
-				- 2021.9 <br>
-				Mentors: Dr. <a href="https://research.adobe.com/person/jiuxiang-gu/" target="_blank">Jiuxiang Gu</a>,
-				Dr. <a href="https://research.adobe.com/person/tong-sun/" target="_blank">Tong Sun</a>
-			</li>
-			<li>
-				<strong>Research Intern</strong>, <em>Natural Language Computing Group</em>, <em> Microsoft Research
-					Asia</em>, 2017.11 - 2018.5<br>
-					Mentors: Dr. <a href="https://www.microsoft.com/en-us/research/people/leiji/" target="_blank">Lei
-					Ji</a>, Dr. <a href="https://www.microsoft.com/en-us/research/people/nanduan/" target="_blank">Nan
-					Duan</a>, Dr. <a href="https://www.microsoft.com/en-us/research/people/mingzhou/"
-					target="_blank">Ming Zhou</a>
-			</li>
-			<li>
-				<strong>Research Assistant</strong>, <em>Multimedia Lab</em>, <em>Chinese University of Hong Kong</em>,
-				2016.8 - 2017.10 <br>
-				Advisors: Prof. <a href="https://www.ee.cuhk.edu.hk/~hsli/" target="_blank">Hongsheng Li</a>, Prof. <a
-					href="https://www.ee.cuhk.edu.hk/~xgwang/" target="_blank">Xiaogang Wang</a>
-			</li>
-		</ul>
-	</div><br> -->
-
 
 	<!-- Teaching -->
 	<div class="container">
@@ -2139,20 +2203,6 @@
 		</ul>
 	</div><br>
 
-	<!-- Tweets -->
-	<!-- https://publish.twitter.com/?buttonType=FollowButton&query=%40lupantech&widget=Timeline -->
-	<!-- <div class="container">
-		<h3 id="Tweets" style="">Tweets</h3>
-		<hr>
-		<ul>
-			<div class="container" style="text-align: left;">
-				<a class="twitter-timeline" data-width="50%" data-height="500" data-theme="light"
-					href="https://twitter.com/lupantech?ref_src=twsrc%5Etfw">Tweets by lupantech</a>
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-			</div>
-		</ul>
-	</div><br> -->
-
 	<!-- Contact -->
 	<div class="container">
 		<h3 id="Contact" style="">Contact</h3>
@@ -2170,7 +2220,6 @@
 		<a href="https://github.com/lupantech" target="_blank">[GitHub]</a> &nbsp;|&nbsp;
 		<a href="https://www.linkedin.com/in/pan-lu-9308909a/" target="_blank">[LinkedIn]</a>
 	</div>
-
 
 	<!-- Footer -->
 	<div class="container">
@@ -2220,6 +2269,37 @@ function showMore(){
     moreContent.style.display = "inline";
   }
 }
+
+// Category filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const publications = document.querySelectorAll('.publication-item');
+  
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const category = this.getAttribute('data-category');
+      
+      // Update active button
+      categoryButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+      
+      // Filter publications
+      publications.forEach(publication => {
+        if (category === 'all') {
+          publication.classList.remove('hidden');
+        } else {
+          // Split by comma and trim whitespace
+          const categories = publication.getAttribute('data-category').split(',').map(cat => cat.trim());
+          if (categories.includes(category)) {
+            publication.classList.remove('hidden');
+          } else {
+            publication.classList.add('hidden');
+          }
+        }
+      });
+    });
+  });
+});
 	</script>
 
 </body>

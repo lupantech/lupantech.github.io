@@ -1,0 +1,6 @@
+@article{zhu2025llm,
+  title={Where LLM Agents Fail and How They can Learn From Failures},
+  author={Zhu, Kunlun and Liu, Zijia and Li, Bingxuan and Tian, Muxin and Yang, Yingxuan and Zhang, Jiaxun and Han, Pengrui and Xie, Qipeng and Cui, Fuyang and Zhang, Weijia and others},
+  journal={arXiv preprint arXiv:2509.25370},
+  year={2025}
+}

@@ -1,0 +1,6 @@
+@article{fu2025learning,
+  title={Learning Human-Perceived Fakeness in AI-Generated Videos via Multimodal LLMs},
+  author={Fu, Xingyu and Liu, Siyi and Xu, Yinuo and Lu, Pan and Hu, Guangqiuse and Yang, Tianbo and Anantasagar, Taran and Shen, Christopher and Mao, Yikai and Liu, Yuanzhe and others},
+  journal={arXiv preprint arXiv:2509.22646},
+  year={2025}
+}

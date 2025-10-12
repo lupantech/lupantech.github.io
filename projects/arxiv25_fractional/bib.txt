@@ -1,0 +1,6 @@
+@article{liu2025fractional,
+  title={Fractional Reasoning via Latent Steering Vectors Improves Inference Time Compute},
+  author={Liu, Sheng and Chen, Tianlang and Lu, Pan and Ye, Haotian and Chen, Yizheng and Xing, Lei and Zou, James},
+  journal={arXiv preprint arXiv:2506.15882},
+  year={2025}
+}

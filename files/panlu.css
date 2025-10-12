@@ -93,3 +93,48 @@ h3 {
 .twitter {
   float: right;
 }
+
+/* Category filter buttons */
+.category-buttons {
+  text-align: left;
+}
+
+.category-btn {
+  background-color: #f0f0f0;
+  border: 2px solid #003262;
+  color: #003262;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.category-btn:hover {
+  background-color: #003262;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 50, 98, 0.2);
+}
+
+.category-btn.active {
+  background-color: #003262;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 50, 98, 0.3);
+}
+
+.publication-item {
+  transition: all 0.3s ease;
+}
+
+.publication-item.hidden {
+  display: none;
+}
+
+/* Hide the hr separator after hidden publications */
+.publication-item.hidden + hr {
+  display: none;
+}

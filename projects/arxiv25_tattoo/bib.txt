@@ -1,0 +1,6 @@
+@article{zou2025tattoo,
+  title={TaTToo: Tool-Grounded Thinking PRM for Test-Time Scaling in Tabular Reasoning},
+  author={Zou, Jiaru and Roy, Soumya and Verma, Vinay Kumar and Wang, Ziyi and Wipf, David and Lu, Pan and Negi, Sumit and Zou, James and He, Jingrui},
+  journal={arXiv preprint arXiv:2510.06217},
+  year={2025}
+}
