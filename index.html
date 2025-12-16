@@ -678,8 +678,8 @@
 		
 		<!-- Category Filter Buttons -->
 		<div class="category-buttons" style="margin-bottom: 5px;">
-			<button class="category-btn active" data-category="all">All</button>
-			<button class="category-btn" data-category="highlights">Highlights</button>
+			<button class="category-btn" data-category="all">All</button>
+			<button class="category-btn active" data-category="highlights">Highlights</button>
 			<button class="category-btn" data-category="agentic">Agentic AI</button>
 			<button class="category-btn" data-category="llm-reasoning">LLM/VLM Reasoning</button>
 			<!-- <button class="category-btn" data-category="vlm-reasoning">VLM Reasoning</button> -->
@@ -863,7 +863,7 @@
 						Solving Inequality Proofs with Large Language Models
 					</font>
 				</b><br>
-				Pan Lu*, Jiayi Sheng*, Luna Lyu*, Jikai Jin, Tony Xia, Alex Gu, James Zou
+				<b>Pan Lu*</b>, Jiayi Sheng*, Luna Lyu*, Jikai Jin, Tony Xia, Alex Gu, James Zou
 				<br>
 				<b><a href="https://arxiv.org/abs/2506.07927" target="_blank">NeurIPS 2025&nbsp;</a></b>
 				<a href="https://ineqmath.github.io/" target="_blank"> <small>[Project]&nbsp;</small></a>
@@ -2358,28 +2358,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const categoryButtons = document.querySelectorAll('.category-btn');
   const publications = document.querySelectorAll('.publication-item');
   
+  // Function to filter publications by category
+  function filterByCategory(category) {
+    // Update active button
+    categoryButtons.forEach(btn => btn.classList.remove('active'));
+    const activeButton = Array.from(categoryButtons).find(btn => btn.getAttribute('data-category') === category);
+    if (activeButton) {
+      activeButton.classList.add('active');
+    }
+    
+    // Filter publications
+    publications.forEach(publication => {
+      if (category === 'all') {
+        publication.classList.remove('hidden');
+      } else {
+        // Split by comma and trim whitespace
+        const categories = publication.getAttribute('data-category').split(',').map(cat => cat.trim());
+        if (categories.includes(category)) {
+          publication.classList.remove('hidden');
+        } else {
+          publication.classList.add('hidden');
+        }
+      }
+    });
+  }
+  
+  // Set default to highlights
+  filterByCategory('highlights');
+  
   categoryButtons.forEach(button => {
     button.addEventListener('click', function() {
       const category = this.getAttribute('data-category');
-      
-      // Update active button
-      categoryButtons.forEach(btn => btn.classList.remove('active'));
-      this.classList.add('active');
-      
-      // Filter publications
-      publications.forEach(publication => {
-        if (category === 'all') {
-          publication.classList.remove('hidden');
-        } else {
-          // Split by comma and trim whitespace
-          const categories = publication.getAttribute('data-category').split(',').map(cat => cat.trim());
-          if (categories.includes(category)) {
-            publication.classList.remove('hidden');
-          } else {
-            publication.classList.add('hidden');
-          }
-        }
-      });
+      filterByCategory(category);
     });
   });
 });
