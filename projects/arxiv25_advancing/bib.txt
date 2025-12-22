@@ -1,0 +1,6 @@
+@article{liu2025advancing,
+  title = {Advancing AI Research Assistants with Expert-Involved Learning},
+  author = {Liu, Tianyu and Han, Simeng and Wang, Hanchen and Luo, Xiao and Lu, Pan and Zhu, Biqing and Wang, Yuge and Li, Keyi and Chen, Jiapeng and Qu, Rihao and Liu, Yufeng and Cui, Xinyue and Yaish, Aviv and Chen, Yuhang and Hao, Minsheng and Li, Chuhan and Li, Kexing and Cohan, Arman and Xu, Hua and Gerstein, Mark and Zou, James and Zhao, Hongyu},
+  journal = {arXiv preprint arXiv:2505.04638},
+  year = {2025}
+}
