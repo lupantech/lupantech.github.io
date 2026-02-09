@@ -1,0 +1,6 @@
+@article{leiby2026isight,
+  title={iSight: Towards expert-AI co-assessment for improved immunohistochemistry staining interpretation},
+  author={Leiby, Jacob S and Yao, Jialu and Lu, Pan and Hu, George and Davidian, Anna and Koga, Shunsuke and Leung, Olivia and Patel, Pravin and Resta, Isabella Tondi and Rojansky, Rebecca and others},
+  journal={arXiv preprint arXiv:2602.04063},
+  year={2026}
+}
