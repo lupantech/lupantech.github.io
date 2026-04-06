@@ -1,6 +1,6 @@
-@article{lu2026octotools,
+@proceeding{lu2026octotools,
     author = {Lu, Pan and Chen, Bowen and Liu, Sheng and Thapa, Rahul and Boen, Joseph and Zou, James},
     title = {OctoTools: An Agentic Framework with Extensible Tools for Complex Reasoning},
-    journal = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
+    booktitle = {The 64th Annual Meeting of the Association for Computational Linguistics (ACL)},
     year = {2026}
 }
