@@ -1,0 +1,6 @@
+@inproceedings{wu2026proteor1,
+    title = {Proteo-R1: Thinking Foundation Models for De Novo Protein Binder Design},
+    author = {Wu, Fang and Li, Li Erran and Xuan, Weihao and Qi, Heli and Zhou, Zeqi and Cao, Hanqun and Chang, Heng-Jui and Zhao, Haokai and Ma, Jian and Ma, Zijian Carl and Cheng, Yu-Chi and Tang, Xiangru and Wang, Zehong and Pang, Kuan and Hanchen and Ying, Kejun and Lu, Pan and Im, Chiho and Han, Seungju and Xia, Peng and Li, Yinxi and Li, Guanlue and Xu, Tinson and Zhu, Deyao and Heng, Pheng-Ann and Yokoya, Naoto and Sugiyama, Masashi and Leskovec, Jure and Choi, Yejin},
+    booktitle = {International Conference on Machine Learning (ICML)},
+    year = {2026}
+}

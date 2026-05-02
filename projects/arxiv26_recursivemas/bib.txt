@@ -1,0 +1,6 @@
+@article{yang2026recursivemas,
+  title={Recursive Multi-Agent Systems},
+  author={Yang, Xiyuan and Zou, Jiaru and Pan, Rui and Qiu, Ruizhong and Lu, Pan and Diao, Shizhe and Jiang, Jindong and Tong, Hanghang and Zhang, Tong and Buehler, Markus J. and He, Jingrui and Zou, James},
+  journal={arXiv preprint arXiv:2604.25917},
+  year={2026}
+}
